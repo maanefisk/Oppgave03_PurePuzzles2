@@ -7,13 +7,38 @@ namespace Oppgave03_PurePuzzles2
         static void Main(string[] args)
         {
             string space = " ";
-            for (int nylinje = 0; nylinje < 8; nylinje++)
+            string hash = "#";
+            int nedtelling = 8;
+            for (int nylinje = 1; nylinje < 5; nylinje++)
             {
-                Console.WriteLine("new");
-                for (int mellomrom = 0; mellomrom < nylinje; mellomrom++)
+                for (int mellomrom = 0; mellomrom < nedtelling; mellomrom++)
                 {
-                    Console.Write("X");
+                    Console.Write(space);
                 }
+
+                for (int ikon = 0; ikon < nylinje; ikon++)
+                {
+                    Console.Write(hash+hash);
+                }
+
+                nedtelling = nedtelling - 1;
+                Console.WriteLine();
+            }
+            for (int b = 5; b < 10; b++)
+            {
+                for (int c = 0; c < b; c++)
+                {
+                    Console.Write(space);
+                }
+
+                for (int a = 0; a < nedtelling; a++)
+                {
+                    Console.Write(hash+hash);
+                }
+
+                nedtelling = nedtelling - 1;
+
+                Console.WriteLine();
             }
         }
     }
