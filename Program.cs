@@ -6,7 +6,15 @@ namespace Oppgave03_PurePuzzles2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string space = " ";
+            for (int nylinje = 0; nylinje < 8; nylinje++)
+            {
+                Console.WriteLine("new");
+                for (int mellomrom = 0; mellomrom < nylinje; mellomrom++)
+                {
+                    Console.Write("X");
+                }
+            }
         }
     }
 }
